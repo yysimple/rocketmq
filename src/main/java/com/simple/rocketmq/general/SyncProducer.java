@@ -29,7 +29,7 @@ public class SyncProducer {
         producer.start();
 
         // 生产并发送100条消息
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             byte[] body = ("Hi," + i).getBytes();
             Message msg = new Message("syncTopic", "syncTag", body);
             // 为消息指定key（业务key）
